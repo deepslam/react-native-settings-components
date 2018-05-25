@@ -30,6 +30,7 @@ class SettingsPicker extends Component {
         modalButtonsTitleStyle: Text.propTypes.style,
         modalButtonsTitleNegativeStyle: Text.propTypes.style,
         modalButtonsTitlePositiveStyle: Text.propTypes.style,
+        emptyPlaceholder: PropTypes.string
     };
 
     static defaultProps = {
@@ -42,6 +43,7 @@ class SettingsPicker extends Component {
         modalDescriptionStyle: {},
         valueProps: {},
         valuePlaceholder: '...',
+        emptyPlaceholder: '...',
         valueStyle: {},
         disabled: false,
     };
@@ -72,7 +74,7 @@ class SettingsPicker extends Component {
             containerProps, containerStyle, title, titleProps, titleStyle, valueProps, valueStyle, valuePlaceholder,
             disabledOverlayStyle, modalStyle, modalInnerStyle,
             modalTitleStyle, modalDescriptionStyle, modalButtonsTitleStyle, modalButtonsTitleNegativeStyle,
-            modalButtonsTitlePositiveStyle, value} = this.props;
+            modalButtonsTitlePositiveStyle, value, emptyPlaceholder} = this.props;
 
         return <View style={{width: '100%'}}>
             {(!disabled) ? <TouchableOpacity onPress={() => {
@@ -152,7 +154,7 @@ class SettingsPicker extends Component {
                 </View>
             </TouchableOpacity> : <View {...containerProps} style={[styles.defaultContainerStyle, containerStyle]}>
                 <Text {...titleProps} style={[styles.defaultTitleStyle, titleStyle]}>{title}</Text>
-                <Text {...valueProps} style={[styles.defaultValueStyle, valueStyle]}>{(value) ? value : valuePlaceholder}</Text>
+                <Text {...valueProps} style={[styles.defaultValueStyle, valueStyle]}>{(valuePlaceholder) ? valuePlaceholder : (value?value:emptyPlaceholder)}</Text>
                 <View style={[{position: "absolute", top: 0, right: 0, bottom: 0, left: 0},
                     styles.defaultDisabledOverlayStyle, disabledOverlayStyle]}/>
             </View>}
