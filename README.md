@@ -1,7 +1,7 @@
-# react-native-settings-components
+# react-native-settings-builder
 
-![npm](https://img.shields.io/npm/v/react-native-settings-components.svg)
-![dependencies](https://img.shields.io/david/florianstahr/react-native-settings-components.svg)
+![npm](https://img.shields.io/npm/v/react-native-settings-builder.svg)
+![dependencies](https://img.shields.io/david/florianstahr/react-native-settings-builder.svg)
 
 Settings components for React Native in style of native iOS or Android components. Uses [`react-native-dialogs`](https://github.com/aakashns/react-native-dialogs) for dialogs on Android.
 
