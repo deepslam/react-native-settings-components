@@ -1,7 +1,7 @@
 {
-  "name": "react-native-settings-components",
+  "name": "react-native-settings-builder",
   "description": "settings components in style of native components (Category Header, Divider, EditText, Picker, Switch). Forked from https://github.com/florianstahr/react-native-settings-components. Thank you for a great work!",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "src/index.js",
   "repository": {
     "type": "git",
