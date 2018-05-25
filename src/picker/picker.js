@@ -149,7 +149,7 @@ class SettingsPicker extends Component {
                         {this.props.title}
                     </Text>
                     <Text {...valueProps} style={[styles.defaultValueStyle, valueStyle]}>
-                        {(value) ? value : valuePlaceholder}
+                        {(valuePlaceholder) ? valuePlaceholder : (value?value:emptyPlaceholder)}
                     </Text>
                 </View>
             </TouchableOpacity> : <View {...containerProps} style={[styles.defaultContainerStyle, containerStyle]}>
